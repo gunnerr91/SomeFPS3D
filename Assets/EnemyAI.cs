@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent navMeshAgent;
     float targetDistance = Mathf.Infinity;
+    bool isProvoked;
 
 
     void Start()
@@ -21,10 +23,37 @@ public class EnemyAI : MonoBehaviour
     {
         var distanceToTarget = Vector3.Distance(target.position, transform.position);
 
-        if (distanceToTarget < chaseRange)
+        if (isProvoked)
         {
-            navMeshAgent.SetDestination(target.position);
+            EngageTarget(distanceToTarget);
+        }
+        else if (distanceToTarget <= chaseRange)
+        {
+            isProvoked = true;
+        }
+    }
+
+    private void EngageTarget(float distanceToTarget)
+    {
+        if(distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
         }
 
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
+            print("DIE HUMAN");
+        }
+    }
+
+    private void ChaseTarget()
+    {
+        navMeshAgent.SetDestination(target.position);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
