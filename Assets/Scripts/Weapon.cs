@@ -4,6 +4,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] Camera FPSCamera;
     [SerializeField] float range = 100f;
+    [SerializeField] float damage = 20f;
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class Weapon : MonoBehaviour
             if (hit.transform.name == "Enemy" || hit.transform.name == "EnemyHealth")
             {
                 EnemyHealth enemy = hit.transform.GetComponent<EnemyHealth>();
-                enemy.TakeDamage(20f);
+                enemy.TakeDamage(damage);
             }
             else
             {
