@@ -465,6 +465,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 831c1389ceffed84d947c9aa3fc86ac2, type: 3}
   m_PrefabInstance: {fileID: 243333399}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &253919615 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1928658753288030147, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 1986744428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &312492075
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -768,7 +773,7 @@ MonoBehaviour:
   FPSCamera: {fileID: 1724907107}
   range: 100
   damage: 20
-  muzzleFlash: {fileID: 2071017929}
+  muzzleFlash: {fileID: 253919615}
 --- !u!1001 &574729942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2079,11 +2084,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 44884af1ac1d64d42902da40268ba120, type: 3}
   m_PrefabInstance: {fileID: 2043204139}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &2071017929 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4823273436045645919, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-  m_PrefabInstance: {fileID: 1986744428}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &668220214297684837
 PrefabInstance:
