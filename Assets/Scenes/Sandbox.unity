@@ -748,6 +748,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5862bbfe91a75054ca72c13b555b6ac5, type: 3}
   m_PrefabInstance: {fileID: 472728961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &569965303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6405427426964687798, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 1986744428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &569965307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569965303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936ab6d3b7c30214198a158f16974bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSCamera: {fileID: 1724907107}
+  range: 100
 --- !u!1001 &574729942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,6 +1346,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 93e86b57e56570d46814839867bf9a52, type: 3}
   m_PrefabInstance: {fileID: 1244712697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1404053197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 668220214995792096, guid: 43cd243165fc16249a33f95edd5711e2, type: 3}
+  m_PrefabInstance: {fileID: 668220214297684837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404053198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404053197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36aae9926473f8944981fc29bf37ac2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
 --- !u!1001 &1462130454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1524,6 +1561,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9ae7f9f9eacff4142b21eb85ae606fdc, type: 3}
   m_PrefabInstance: {fileID: 1703695695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1724907107 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 1986744428}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858208156
 GameObject:
@@ -1814,7 +1856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.z
