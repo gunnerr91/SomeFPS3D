@@ -36,7 +36,7 @@ public class Weapon : MonoBehaviour
         {
             GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impact, .1f);
-            if (hit.transform.name == "Enemy" || hit.transform.name == "EnemyHealth")
+            if (hit.transform.name.Contains("Enemy") || hit.transform.name == "EnemyHealth")
             {
                 EnemyHealth enemy = hit.transform.GetComponent<EnemyHealth>();
                 enemy.TakeDamage(damage);
