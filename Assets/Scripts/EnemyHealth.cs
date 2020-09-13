@@ -11,7 +11,8 @@ public class EnemyHealth : MonoBehaviour
         {
             hitPoints -= damagePoints;
         }
-        else
+        
+        if(hitPoints < 0)
         {
             Destroy(gameObject);
         }
