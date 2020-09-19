@@ -25,7 +25,7 @@ public class WeaponsSwitcher : MonoBehaviour
             currentWeaponIndex = 2;
         }
 
-        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if(currentWeaponIndex >= transform.childCount - 1)
             {
@@ -36,7 +36,7 @@ public class WeaponsSwitcher : MonoBehaviour
                 currentWeaponIndex++;
             }
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        else if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (currentWeaponIndex <= 0)
             {
