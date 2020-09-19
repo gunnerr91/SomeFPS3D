@@ -1,15 +1,17 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] Camera FPSCamera;
-    [SerializeField] float range = 100f;
-    [SerializeField] float damage = 20f;
-    [SerializeField] ParticleSystem muzzleFlash;
-    [SerializeField] GameObject hitEffect;
-    [SerializeField] Ammo ammoSlot;
-    [SerializeField] float timeBetweenShots = 0.5f;
+    public Camera FPSCamera;
+    public float range = 100f;
+    public float damage = 20f;
+    public ParticleSystem muzzleFlash;
+    public GameObject hitEffect;
+    public Ammo ammoSlot;
+    public AmmoType ammoType;
+    public float timeBetweenShots = 0.5f;
 
     bool canShoot = true;
 
@@ -29,11 +31,11 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();
             ProcessRayCast();
-            ammoSlot.ReduceCurrentAmmo();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
